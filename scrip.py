@@ -25,5 +25,5 @@ while True:
     image = cv2.imdecode(file_bytes, 0)
     cv2.imshow("recv",image)
     cv2.waitKey(10)
-    #r = 'Receieve'
-    #sock.sendall(r.encode())
+    r = 'Receieve'
+    sock.sendto(r.encode(),client_address)
